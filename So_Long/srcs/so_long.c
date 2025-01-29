@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 12:18:40 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/29 21:22:40 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/29 21:46:32 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	mlx_function(t_long	*var)
 	if (!var->mlx)
 		clean_exit(var, 1, "Failed to initialize mlx connection\n");
 	var->mlx_window = mlx_new_window(var->mlx,
-			var->n_cols * WIDTH, var->n_rows * HEIGHT, "Zombie's Lunch");
+			var->n_cols * WIDTH, var->n_rows * HEIGHT, "Zombie's Lunch\n");
 	if (!var->mlx_window)
 		clean_exit(var, 1, "Failed to open a window\n");
 	convert_imgs(var);

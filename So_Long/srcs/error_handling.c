@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:01:27 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/29 21:39:58 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/29 21:47:59 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,21 @@ void	error_borders(t_long *var)
 	while (i < var->n_cols)
 	{
 		if (!(var->map[0][i] == '1'))
-			clean_exit(var, 1, "Error: stupid, Borders are not correct1\n");
+			clean_exit(var, 1, "Error: stupid, Borders are not correct\n");
 		i++;
 	}
 	i = 1;
 	while (i < var->n_rows - 1)
 	{
 		if (!(var->map[i][0] == '1') || !(var->map[i][var->n_cols - 1] == '1'))
-			clean_exit(var, 1, "Error: stupid, Borders are not correct2\n");
+			clean_exit(var, 1, "Error: stupid, Borders are not correct\n");
 		i++;
 	}
 	i = 0;
 	while (i < var->n_cols)
 	{
 		if (!(var->map[var->n_rows - 1][i] == '1'))
-			clean_exit(var, 1, "Error: stupid, Borders are not correct3\n");
+			clean_exit(var, 1, "Error: stupid, Borders are not correct\n");
 		i++;
 	}
 }
