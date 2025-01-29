@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tabuayya <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 12:38:16 by tabuayya          #+#    #+#             */
-/*   Updated: 2024/09/02 15:51:08 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/29 19:15:14 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include "get_next_line.h"
 # include "ft_printf.h" 
 
+char	*ft_substr_gnl(char *str, int start, int size);
+char	*ft_strjoin_gnl(char *s1, char *s2);
+char	*ft_strdup_gnl(char *str);
+int		ft_strchr_gnl(char *str, char ch);
+int		ft_strlen_gnl(char *str);
 char	*get_next_line(int fd);
 int		ft_atoi(const char *nptr);
 int		ft_isascii(int c);

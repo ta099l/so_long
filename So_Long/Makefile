@@ -11,8 +11,7 @@ LIB = -L./ft_lib -lft -lmlx -lX11 -lm -lXext
 
 RM = rm -rf
 
-SRCS = so_long.c reading_map.c error_handling.c clean_exit.c intialize.c
-
+SRCS = so_long.c reading_map.c error_handling.c clean_exit.c intialize.c convert_imgs.c flood_fill.c moving.c put_imgs.c
 
 SRC  = $(addprefix $(SRCDIR)/, $(SRCS))
 
