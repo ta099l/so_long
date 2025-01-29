@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 18:24:25 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/26 15:40:48 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/29 18:25:07 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int     clean_exit(t_long *var, int exit_code, char *message)
 {
     if(var->map)
         free_2d_array(var->map);
-    //if (var->map_cpy)
-        //free_2d_array(var->map_cpy);
+    if (var->c_map)
+        free_2d_array(var->c_map);
     //if (var->bonus_ptr)
         //free(var->bonus_ptr);
     images_destroy(var);

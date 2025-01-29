@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:18:31 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/23 18:04:33 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/29 18:13:28 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../ft_lib/includes/libft.h"
 #include <mlx.h>
+#include <X11/keysym.h>
 #include <fcntl.h>
 #include <stdlib.h>
 
@@ -24,13 +25,17 @@
 typedef struct s_long
 {
     char    **map;
+    char    **c_map;
     int     n_rows;
     int     n_cols;
     int     n_player;
     int     n_collectable;
     int     n_exit;
-    //int     player_y;
-    //int     player_x;
+    int     player_y;
+    int     player_x;
+    int     n_moves;
+    int     cpy_n_collectable;
+    int     flag;
     void    *mlx;
     void    *mlx_window;
     void    *p_front_img;
@@ -57,4 +62,5 @@ void	what_block(t_long *var, int r, int c);
 void	convert_imgs(t_long *var);
 void	convert_imgs_prt2(t_long *var, int x ,int y);
 int     clean_exit(t_long *var, int exit_code, char *message);
+void    initialize_variables(t_long *var);
 #endif

@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 18:01:27 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/23 18:05:11 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/28 13:11:15 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    error_borders(t_long *var)
     int     i;  
     
     i = 0;
-    ft_printf("%d", var->n_cols);
+    //ft_printf("%d", var->n_cols);
     while (i < var->n_cols)
     {
         //ft_printf("%i\n", var->map[0][i]);
@@ -40,7 +40,7 @@ void    error_borders(t_long *var)
     i = 1;
     while(i < var->n_rows - 1)
 	{
-        ft_printf("%d", var->n_cols);
+        //ft_printf("%d", var->n_cols);
 		if(!(var->map[i][0] == '1') || !(var->map[i][var->n_cols - 1] == '1')) 
 			clean_exit(var, 1, "Borders are not correct2\n"); //function
 		i++;
