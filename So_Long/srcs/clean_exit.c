@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 18:24:25 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/29 21:42:36 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/30 18:25:25 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,24 @@ void	images_destroy(t_long *var)
 
 int	clean_exit(t_long *var, int exit_code, char *message)
 {
-	if (var->map)
-		free_2d_array(var->map);
-	if (var->c_map)
-		free_2d_array(var->c_map);
-	if (var->bonus_ptr)
-		free(var->bonus_ptr);
-	images_destroy(var);
-	if (var->mlx_window)
-		mlx_destroy_window(var->mlx, var->mlx_window);
-	if (var->mlx)
-	{
-		mlx_destroy_display(var->mlx);
-		free(var->mlx);
-	}
 	if (var)
+	{
+		if (var->map)
+			free_2d_array(var->map);
+		if (var->c_map)
+			free_2d_array(var->c_map);
+		if (var->bonus_ptr)
+			free(var->bonus_ptr);
+		images_destroy(var);
+		if (var->mlx_window)
+			mlx_destroy_window(var->mlx, var->mlx_window);
+		if (var->mlx)
+		{
+			mlx_destroy_display(var->mlx);
+			free(var->mlx);
+		}
 		free(var);
+	}
 	if (exit_code == 1)
 		ft_putstr_fd(message, 2);
 	if (exit_code == 0)

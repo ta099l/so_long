@@ -6,7 +6,7 @@
 /*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 21:15:27 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/01/29 21:47:25 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/01/30 18:22:37 by tabuayya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	copy_map_and_allocate(t_long *var)
 	{
 		y = 0;
 		var->c_map[x] = malloc(sizeof(char) * (var->n_cols + 1));
-		if (!var->c_map)
+		if (!var->c_map[x])
 			clean_exit(var, 1, "Malloc Died\n");
 		while (y < var->n_cols)
 		{
